@@ -1,0 +1,30 @@
+{
+  "name": "pynode-bridge",
+  "version": "0.0.1",
+  "description": "A bridge between Python and Node.js to have the best of both worlds.",
+  "author": "Md. Shahadul Alam Patwary",
+  "main": "src/node/application.js",
+  "scripts": {
+    "start": "nodemon ."
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahadul-17/pynode-bridge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shahadul-17/pynode-bridge/issues"
+  },
+  "homepage": "https://github.com/shahadul-17/pynode-bridge#readme",
+  "dependencies": {
+    "@shahadul-17/event-manager": "^0.0.4",
+    "@shahadul-17/random-generator": "^0.0.1",
+    "@shahadul-17/uid-generator": "^0.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

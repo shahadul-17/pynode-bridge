@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "72f915d8-af3c-4431-97fc-f89526a04ce5",
+		"name": "PyNode Bridge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v{{apiVersion}}/ping",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v{{apiVersion}}",
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Math Example",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"a\": 200,\r\n    \"b\": 100\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v{{apiVersion}}/pynode-bridge/Math/add",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v{{apiVersion}}",
+						"pynode-bridge",
+						"Math",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "8a68be54-b4dd-4ab0-960d-01a7e66e3942",
+			"key": "host",
+			"value": "http://127.0.0.1:53631"
+		},
+		{
+			"id": "6c3db33e-d4ea-427c-84a7-0c5b01ace146",
+			"key": "apiVersion",
+			"value": "1.0"
+		}
+	]
+}

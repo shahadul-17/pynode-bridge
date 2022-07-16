@@ -1,0 +1,13 @@
+import traceback
+
+# returns formatted exception...
+def get_formatted_exception():
+  formatted_exception = traceback.format_exc()
+
+  # if formatted_exception is 'None'...
+  if formatted_exception is None:
+    # we shall return empty string...
+    return ''
+
+  # otheriwse, we'll return the formatted exception...
+  return formatted_exception

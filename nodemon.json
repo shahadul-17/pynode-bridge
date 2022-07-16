@@ -1,0 +1,6 @@
+{
+  "ignore": [
+    "./application-data",
+    "./postman-collection.json"
+  ]
+}
