@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "72f915d8-af3c-4431-97fc-f89526a04ce5",
+		"_postman_id": "74da002c-7a4a-49d3-a9be-3c8ee52a7e4c",
 		"name": "PyNode Bridge",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -53,6 +53,42 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Content Example",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": []
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v{{apiVersion}}/pynode-bridge/Content/list",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v{{apiVersion}}",
+						"pynode-bridge",
+						"Content",
+						"list"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -77,12 +113,12 @@
 	],
 	"variable": [
 		{
-			"id": "8a68be54-b4dd-4ab0-960d-01a7e66e3942",
+			"id": "9a8b9840-b090-4412-9762-1927824ef9a0",
 			"key": "host",
 			"value": "http://127.0.0.1:53631"
 		},
 		{
-			"id": "6c3db33e-d4ea-427c-84a7-0c5b01ace146",
+			"id": "73bf5e30-c6fd-41a5-a762-a13fb15e9a2d",
 			"key": "apiVersion",
 			"value": "1.0"
 		}

@@ -1,0 +1,16 @@
+import Utilities
+
+def list(arguments):
+  # retrieves function arguments from arguments...
+  function_arguments = arguments['function_arguments']
+  # retrieves file infos...
+  file_infos = function_arguments['$fileInfos']
+  # retrieves the first file info...
+  file_info = file_infos[0]
+  # reads CSV contents from file...
+  contents = Utilities.read_csv_file(file_info['filePath'])
+
+  # returns the contents read from the uploaded file...
+  return {
+    'contents': contents,
+  }

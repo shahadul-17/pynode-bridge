@@ -53,23 +53,22 @@ module.exports.FileUtilities = class FileUtilities {
   }
 
   /**
-   * @param {String} filePath 
-   * @param {String} fileName 
+   * @param {String} directoryPath 
+   * @param {String} fileExtension 
    * @param {Number} length 
    * @returns {String} 
    */
-  static generateFileName(filePath, fileName, length = 64) {
-    const fileExtension = path.extname(fileName);
-    let _fileName;
+  static generateFileName(directoryPath, fileExtension, length = 64) {
+    let fileName;
     let fileExists;
 
     do {
-      _fileName = RandomGenerator.generateString(length - fileExtension.length);
-      _fileName = `${_fileName}${fileExtension}`;
-      fileExists = FileUtilities.exists(`${filePath}/${_fileName}`);
+      fileName = RandomGenerator.generateString(length - fileExtension.length);
+      fileName = `${fileName}${fileExtension}`;
+      fileExists = FileUtilities.exists(`${directoryPath}/${fileName}`);
     } while (fileExists);
 
-    return _fileName;
+    return fileName;
   }
 
   /**

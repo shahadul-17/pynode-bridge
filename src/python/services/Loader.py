@@ -2,6 +2,7 @@ import sys
 
 sys.path.append('./src/python/common')
 sys.path.append('./src/python/services')
+sys.path.append('./src/python/scripts')
 
 import json
 import threading
